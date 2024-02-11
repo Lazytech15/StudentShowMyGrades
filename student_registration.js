@@ -122,6 +122,7 @@ function code02verified(){
     if(Gcode02){
         codecontainer.push(Gcode02.CourseCode);
         codecontainer = [...new Set(codecontainer)];
+        GenerateContainer = [...new Set(GenerateContainer)];
         checksub=2;
         document.getElementById('verified2').value = Gcode02.CourseCode + " " + teacherName;
         document.getElementById("next_button").style="display: block;";
@@ -143,6 +144,7 @@ function code03verified(){
     if(Gcode03){
         codecontainer.push(Gcode03.CourseCode);
         codecontainer = [...new Set(codecontainer)];
+        GenerateContainer = [...new Set(GenerateContainer)];
         checksub=3;
         document.getElementById('verified3').value = Gcode03.CourseCode + " " + teacherName;
         document.getElementById("next_button").style="display: block;";
@@ -170,7 +172,7 @@ function code04verified(){
         document.getElementById("sub5_verification").style="display: inline-flex;";
         document.getElementById("verified5").style="display:inline-flex;";
     }else{
-        document.getElementById('verified4').value = "Please Check your verification & ID! & ID!";
+        document.getElementById('verified4').value = "Please Check your verification & ID";
         document.getElementById("next_button").style="display: none;";
     }
 }
@@ -184,6 +186,7 @@ function code05verified(){
     if(Gcode05){
         codecontainer.push(Gcode05.CourseCode);
         codecontainer = [...new Set(codecontainer)];
+        GenerateContainer = [...new Set(GenerateContainer)];
         checksub=5;
         document.getElementById('verified5').value = Gcode05.CourseCode + " " + teacherName;
         document.getElementById("next_button").style="display: block;";
@@ -204,6 +207,7 @@ function code06verified(){
     if(Gcode06){
         codecontainer.push(Gcode06.CourseCode);
         codecontainer = [...new Set(codecontainer)];
+        GenerateContainer = [...new Set(GenerateContainer)];
         checksub=6;
         document.getElementById('verified6').value = Gcode06.CourseCode + " " + teacherName;
         document.getElementById("next_button").style="display: block;";
@@ -245,6 +249,7 @@ function code08verified(){
     if(Gcode08){
         codecontainer.push(Gcode08.CourseCode);
         codecontainer = [...new Set(codecontainer)];
+        GenerateContainer = [...new Set(GenerateContainer)];
         checksub=8;
         document.getElementById('verified8').value = Gcode08.CourseCode + " " + teacherName;
         document.getElementById("next_button").style="display: block;";
@@ -265,6 +270,7 @@ function code09verified(){
     if(Gcode09){
         codecontainer.push(Gcode09.CourseCode);
         codecontainer = [...new Set(codecontainer)];
+        GenerateContainer = [...new Set(GenerateContainer)];
         checksub=9;
         document.getElementById('verified9').value = Gcode09.CourseCode + " " + teacherName;
         document.getElementById("next_button").style="display: block;";
@@ -306,6 +312,7 @@ function code011verified(){
     if(Gcode11){
         codecontainer.push(Gcode11.CourseCode);
         codecontainer = [...new Set(codecontainer)];
+        GenerateContainer = [...new Set(GenerateContainer)];
         checksub=11;
         document.getElementById('verified5').value = Gcode11.CourseCode + " " + teacherName;
         document.getElementById("next_button").style="display: block;";
@@ -326,6 +333,7 @@ function code12verified(){
     if(Gcode12){
         codecontainer.push(Gcode12.CourseCode);
         codecontainer = [...new Set(codecontainer)];
+        GenerateContainer = [...new Set(GenerateContainer)];
         checksub=12;
         document.getElementById('verified12').value = Gcode12.CourseCode + " " + teacherName;
         document.getElementById("next_button").style="display: block;";
