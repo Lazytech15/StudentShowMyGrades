@@ -107,7 +107,7 @@ function code01verified(){
         document.getElementById("sub2_verification").style="display: inline-flex;";
         document.getElementById("verified2").style="display:inline-flex;";
     }else{
-        document.getElementById('verified1').value = "Please Check your verification & ID!";
+        document.getElementById('verified1').value = "Please Check your verification & ID! & ID!";
         document.getElementById("next_button").style="display: none;";
         console.log(Gcode01);
     }
@@ -129,7 +129,7 @@ function code02verified(){
         document.getElementById("sub3_verification").style="display: inline-flex;";
         document.getElementById("verified3").style="display:inline-flex;";
     }else{
-        document.getElementById('verified2').value = "Please Check your verification & ID!";
+        document.getElementById('verified2').value = "Please Check your verification & ID! & ID!";
         document.getElementById("next_button").style="display: none;";
         console.log(Gcode02);
     }
@@ -151,7 +151,7 @@ function code03verified(){
         document.getElementById("sub4_verification").style="display: inline-flex;";
         document.getElementById("verified4").style="display:inline-flex;";
     }else{
-        document.getElementById('verified3').value = "Please Check your verification & ID!";
+        document.getElementById('verified3').value = "Please Check your verification & ID! & ID!";
         document.getElementById("next_button").style="display: none;";
     }
 }
@@ -172,7 +172,7 @@ function code04verified(){
         document.getElementById("sub5_verification").style="display: inline-flex;";
         document.getElementById("verified5").style="display:inline-flex;";
     }else{
-        document.getElementById('verified4').value = "Please Check your verification & ID";
+        document.getElementById('verified4').value = "Please Check your verification & ID! & ID! & ID!";
         document.getElementById("next_button").style="display: none;";
     }
 }
@@ -195,6 +195,7 @@ function code05verified(){
     }else{
         document.getElementById('verified5').value = "Please Check your verification & ID!";
         document.getElementById("next_button").style="display: none;";
+        console.log(Gcode05);
     }
 }
 function code06verified(){
@@ -314,12 +315,12 @@ function code011verified(){
         codecontainer = [...new Set(codecontainer)];
         GenerateContainer = [...new Set(GenerateContainer)];
         checksub=11;
-        document.getElementById('verified5').value = Gcode11.CourseCode + " " + teacherName;
+        document.getElementById('verified11').value = Gcode11.CourseCode + " " + teacherName;
         document.getElementById("next_button").style="display: block;";
-        document.getElementById("sub6_verification").style="display: inline-flex;";
-        document.getElementById("verified6").style="display:inline-flex;";
+        document.getElementById("sub12_verification").style="display: inline-flex;";
+        document.getElementById("verified12").style="display:inline-flex;";
     }else{
-        document.getElementById('verified5').value = "Please Check your verification & ID!";
+        document.getElementById('verified11').value = "Please Check your verification & ID!";
         document.getElementById("next_button").style="display: none;";
     }
 }
