@@ -158,6 +158,12 @@ footer{
     }
     .verif-form-row1{
         width: 300px;
+        height: 58px; 
+        margin-left: 10px;
+    }
+    #verif-form-row2{
+        width: auto;
+        height: 58px;
         margin-left: 10px;
     }
     .container{
