@@ -211,8 +211,12 @@ function code06verified(){
         checksub=6;
         document.getElementById('verified6').value = Gcode06.CourseCode + " " + teacherName;
         document.getElementById("next_button").style="display: block;";
+        document.getElementById("verif-form-row2").style="display: block";
+        document.getElementById("subjects-image").style="display: none";
         document.getElementById("sub7_verification").style="display: inline-flex;";
         document.getElementById("verified7").style="display:inline-flex;";
+        document.getElementById("verif-form-row1").style="width: 300px;";
+        
     }else{
         document.getElementById('verified6').value = "Please Check your verification & ID!";
         document.getElementById("next_button").style="display: none;";
