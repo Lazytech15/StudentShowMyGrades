@@ -160,10 +160,6 @@ footer{
         width: 300px;
         margin-left: 10px;
     }
-    #verif-form-row2{
-        width: auto;
-        margin-left: 10px;
-    }
     .container{
         display: flex;
         justify-content: center;
@@ -205,10 +201,12 @@ footer{
     }
     #verif-form-row1{
         width: 80px;
+        height: 58px;
         margin-left: 10px;
     }
     #verif-form-row2{
         width: auto;
+        height: 58px;
         margin-left: 10px;
     }
     #verif-form-row2 input{
