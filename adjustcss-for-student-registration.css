@@ -160,6 +160,9 @@ footer{
         width: 300px;
         margin-left: 10px;
     }
+    .verif-form-row2{
+        margin-left: 10px;
+    }
     .container{
         display: flex;
         justify-content: center;
