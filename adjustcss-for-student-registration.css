@@ -83,7 +83,12 @@ body{
 #register-container{
     display: block;
 }
-.verif-form-row1{
+.subject-inputs{
+    display: flex;
+    justify-content: space-between;
+    
+}
+#verif-form-row1{
     max-width: 550px;
     min-width: 275px;
 }
@@ -96,11 +101,7 @@ textarea{
     background-color:transparent;
     padding: 10px;
 }
-.subject-inputs{
-    display: flex;
-    justify-content: space-between;
-    
-}
+
 .subjects-image{
     background-image: url(https://e1.pxfuel.com/desktop-wallpaper/891/845/desktop-wallpaper-programming-for-your-or-mobile-screen-and-easy-to-anime-programming.jpg);
     background-repeat: no-repeat;
