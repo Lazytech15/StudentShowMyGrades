@@ -89,8 +89,9 @@ body{
     
 }
 #verif-form-row1{
-    max-width: 550px;
-    min-width: 275px;
+    max-width: 800px;
+    min-width: 320px;
+    min-height: 58px;
 }
 textarea{
     width:170px;
@@ -139,6 +140,36 @@ textarea{
     padding: 10px 5px; 
     margin-bottom: 10px;
 }
+.scanner-qr{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.274);
+}
+#my-qr-reader{
+    display:block;
+    background-color:rgba(8, 8, 8, 0.205);
+    border-radius:10px;
+    padding: 20px;
+    margin: auto;
+    border: 1px solid white;
+    width: 30%;
+    font-weight: bolder;
+    font-family: 'Roboto',serif;
+    justify-content:center;
+    text-align:center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    margin-top: 90px;
+}
+#closecamera{
+    cursor: pointer;
+}
 footer{
     bottom: 10px;
     position: fixed;
@@ -156,14 +187,8 @@ footer{
         margin-top: 5px;
         margin-left: 10px;
     }
-    #verif-form-row1{
+    .verif-form-row1{
         width: 300px;
-        min-height: 58px; 
-        margin-left: 10px;
-    }
-    #verif-form-row2{
-        width: auto;
-        min-height: 58px;
         margin-left: 10px;
     }
     .container{
@@ -181,6 +206,10 @@ footer{
    }
    #myPopup{
       margin-top:110px;
+    }
+    #my-qr-reader{
+        margin-top: 150px;
+        width: 300px;
     }
     footer{
        bottom: 80px;
@@ -207,16 +236,19 @@ footer{
     }
     #verif-form-row1{
         width: 80px;
-        min-height: 58px;
         margin-left: 10px;
     }
     #verif-form-row2{
         width: auto;
-        min-height: 58px;
+        height: 58px auto;
         margin-left: 10px;
     }
     #verif-form-row2 input{
         width: 100px;
+    }
+    #my-qr-reader{
+        margin-top: 150px;
+        width: 300px;
     }
     
 }
