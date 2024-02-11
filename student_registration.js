@@ -385,6 +385,7 @@ async function SaveRegistrationFrom(){
             document.getElementById("student-id").style="display: block;";
             document.getElementById("password").style="display: none;";
             document.getElementById("addsub_button").style="display: none;";
+            document.getElementById("verif-form-row2").style="display: none;"; 
             HidePersonalData(); 
             ShowSubjects();
             cleanUp(); 
@@ -534,6 +535,7 @@ async function checkingaccount(){
         document.getElementById("password").style="display: block;"
         }
       function ShowSubjects(){
+        
         document.getElementById("subjects-container").style="display: block;";
         document.getElementById("verify-button").style="display: block;";
         document.getElementById("subjects-warning").style="display: block;";
