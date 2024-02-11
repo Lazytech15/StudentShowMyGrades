@@ -2,13 +2,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebas
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyByH0pNuEoNXna4Dj61C2QxIX-AfmFAnq0",
-  authDomain: "antipolo-hackathon-project.firebaseapp.com",
-  projectId: "antipolo-hackathon-project",
-  storageBucket: "antipolo-hackathon-project.appspot.com",
-  messagingSenderId: "88056856756",
-  appId: "1:88056856756:web:9597da80bb7239996bd7e1"
-};
+    apiKey: "AIzaSyByH0pNuEoNXna4Dj61C2QxIX-AfmFAnq0",
+    authDomain: "antipolo-hackathon-project.firebaseapp.com",
+    projectId: "antipolo-hackathon-project",
+    storageBucket: "antipolo-hackathon-project.appspot.com",
+    messagingSenderId: "88056856756",
+    appId: "1:88056856756:web:9597da80bb7239996bd7e1"
+  };
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
@@ -29,6 +29,7 @@ const firebaseConfig = {
   let IDrecieved = [];
   let checksub = 0;
   let teacherName;
+  let qrResults;
 
     const sub1_btn = document.getElementById('verify-button');
     const nextbutton = document.getElementById('next_button');
@@ -106,10 +107,10 @@ function code01verified(){
         document.getElementById("next_button").style="display: block;";
         document.getElementById("sub2_verification").style="display: inline-flex;";
         document.getElementById("verified2").style="display:inline-flex;";
+        document.getElementById("qrsub1").style="display: none;";
     }else{
         document.getElementById('verified1').value = "Please Check your verification & ID!";
         document.getElementById("next_button").style="display: none;";
-        console.log(Gcode01);
     }
 }
 function code02verified(){
@@ -385,7 +386,6 @@ async function SaveRegistrationFrom(){
             document.getElementById("student-id").style="display: block;";
             document.getElementById("password").style="display: none;";
             document.getElementById("addsub_button").style="display: none;";
-            document.getElementById("verif-form-row2").style="display: none;"; 
             HidePersonalData(); 
             ShowSubjects();
             cleanUp(); 
@@ -535,10 +535,94 @@ async function checkingaccount(){
         document.getElementById("password").style="display: block;"
         }
       function ShowSubjects(){
-        
         document.getElementById("subjects-container").style="display: block;";
         document.getElementById("verify-button").style="display: block;";
         document.getElementById("subjects-warning").style="display: block;";
         document.getElementById("back_button").style="display: none;";
         document.getElementById("password").style="display: none;"
         }
+
+function QrVerification(){
+    let listdata = [];
+    let newlistdata = [];
+    let teacherName;
+    client.collection("GENERATE_CODE").get().then((querySnapshot) => {
+        querySnapshot.forEach((GenerateData) => {
+        const data = GenerateData.data();
+        const stID = GenerateData.id;
+        newdataID.push(GenerateData.id);
+        teacherName = GenerateData.data().TeacherName;
+        listdata.push({ ...data, stID});
+        })
+        let retrieveCode = listdata.find(function(GenerateCode){
+            return GenerateCode.CourseCode === qrResults && GenerateCode.StudentID === studID.value
+        })
+        if (retrieveCode){
+        newlistdata.push(retrieveCode.studID);
+        codecontainer.push(retrieveCode.CourseCode);
+        codecontainer = [...new Set(codecontainer)];
+        GenerateContainer = [...new Set(GenerateContainer)];
+        checksub=1;
+        document.getElementById('sub1_verification').value = retrieveCode.stID
+        document.getElementById('verified1').value = retrieveCode.CourseCode + " " + teacherName;
+        document.getElementById("next_button").style="display: block;";
+        document.getElementById("qrsub1").style="display: none;";
+        document.getElementById("verify-button").style="display: none;";
+        }else{
+            document.getElementById('pop-up-message').innerHTML="Please check your QR CODE or Student Number";
+            document.getElementById('pop-up-message').style.textAlign = "center";
+            myPopup.classList.add("show");
+            document.getElementById('sub1_verification').value ="";
+            document.getElementById('verified1').value ="";
+            document.getElementById("next_button").style="display: none;";
+        }
+    })
+}
+
+let qrbtn = document.getElementById('qrsub1');
+
+qrbtn.addEventListener('click', function() {
+    if (studID.value === ""){
+        document.getElementById('pop-up-message').innerHTML="Please enter you student number first!";
+        document.getElementById('pop-up-message').style.textAlign = "center";
+        myPopup.classList.add("show");
+    }else{
+    myqrcode.classList.add("show");
+    function domReady(fn) {
+        if (document.readyState === "complete" || document.readyState === "interactive") {
+            setTimeout(fn, 1);
+        } else {
+            document.addEventListener("DOMContentLoaded", fn);
+        }
+    }
+    domReady(function() {
+        var myqr = document.getElementById('you-qr-result');
+        var lastResult, counterResults = 0;
+        function onScanSuccess(decodeText, decodeResult) {
+            if (decodeText !== lastResult) {
+                ++counterResults;
+                lastResult = decodeText;
+
+                qrResults = decodeText,decodeResult;
+                QrVerification();
+                myqrcode.classList.remove("show");
+                myqr.innerHTML = `You scanned ${decodeText}`;
+            }
+            
+        }
+        var htmlscanner = new Html5QrcodeScanner("my-qr-reader", { fps: 10, qrbox: 250 });
+        htmlscanner.render(onScanSuccess);
+    });
+    }
+});
+
+
+    closecamera.addEventListener("click", function () {
+    myqrcode.classList.remove("show");
+    
+  });
+  window.addEventListener("click", function (event) {
+  if (event.target == myqrcode) {
+    myqrcode.classList.remove("show");
+  }
+  });
