@@ -602,8 +602,11 @@ qrbtn.addEventListener('click', function() {
             if (decodeText !== lastResult) {
                 ++counterResults;
                 lastResult = decodeText;
+                
 
                 qrResults = decodeText,decodeResult;
+                const Toseperate = qrResults.split(",");
+                qrResults = Toseperate[1];
                 QrVerification();
                 myqrcode.classList.remove("show");
                 myqr.innerHTML = `You scanned ${decodeText}`;
