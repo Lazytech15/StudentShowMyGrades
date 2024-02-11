@@ -107,7 +107,7 @@ function code01verified(){
         document.getElementById("sub2_verification").style="display: inline-flex;";
         document.getElementById("verified2").style="display:inline-flex;";
     }else{
-        document.getElementById('verified1').value = "Please Check your verification & ID! & ID!";
+        document.getElementById('verified1').value = "Please Check your verification & ID!";
         document.getElementById("next_button").style="display: none;";
         console.log(Gcode01);
     }
@@ -129,7 +129,7 @@ function code02verified(){
         document.getElementById("sub3_verification").style="display: inline-flex;";
         document.getElementById("verified3").style="display:inline-flex;";
     }else{
-        document.getElementById('verified2').value = "Please Check your verification & ID! & ID!";
+        document.getElementById('verified2').value = "Please Check your verification & ID!";
         document.getElementById("next_button").style="display: none;";
         console.log(Gcode02);
     }
@@ -151,7 +151,7 @@ function code03verified(){
         document.getElementById("sub4_verification").style="display: inline-flex;";
         document.getElementById("verified4").style="display:inline-flex;";
     }else{
-        document.getElementById('verified3').value = "Please Check your verification & ID! & ID!";
+        document.getElementById('verified3').value = "Please Check your verification & ID!";
         document.getElementById("next_button").style="display: none;";
     }
 }
@@ -172,7 +172,7 @@ function code04verified(){
         document.getElementById("sub5_verification").style="display: inline-flex;";
         document.getElementById("verified5").style="display:inline-flex;";
     }else{
-        document.getElementById('verified4').value = "Please Check your verification & ID! & ID! & ID!";
+        document.getElementById('verified4').value = "Please Check your verification & ID!";
         document.getElementById("next_button").style="display: none;";
     }
 }
@@ -195,7 +195,6 @@ function code05verified(){
     }else{
         document.getElementById('verified5').value = "Please Check your verification & ID!";
         document.getElementById("next_button").style="display: none;";
-        console.log(Gcode05);
     }
 }
 function code06verified(){
@@ -307,7 +306,7 @@ function code011verified(){
     let Gcode11 = GenerateContainer.find(function(GenerateCode){
         return GenerateCode.dataID === sub11.value && GenerateCode.StudentID === studID.value
     })
-    if (sub5.value ===""){
+    if (sub11.value ===""){
         //don nothing
     }else
     if(Gcode11){
