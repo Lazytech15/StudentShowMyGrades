@@ -26,6 +26,7 @@ const firebaseConfig = {
   let codecontainer = [];
   let dataID = [];
   let newdataID = [];
+  let toDelete =[];
   let IDrecieved = [];
   let checksub = 0;
   let teacherName;
@@ -77,7 +78,7 @@ function conditionStatement(){
                 GenerateContainer.push({ ...data, dataID});
                 IDrecieved.push(dataID);
                
-            }) 
+            })  
                 code01verified();
                 code02verified();
                 code03verified();
@@ -89,7 +90,7 @@ function conditionStatement(){
                 code09verified();
                 code010verified();
                 code011verified();
-                code12verified();
+                code12verified(); 
         })
     }
 }
@@ -99,6 +100,7 @@ function code01verified(){
     })
     if (Gcode01){
         codecontainer.push(Gcode01.CourseCode);
+        toDelete.push(Gcode01.dataID);
         codecontainer = [...new Set(codecontainer)];
         GenerateContainer = [...new Set(GenerateContainer)];
         checksub=1;
@@ -121,6 +123,8 @@ function code02verified(){
     }else
     if(Gcode02){
         codecontainer.push(Gcode02.CourseCode);
+        toDelete.push(Gcode02.dataID);
+        toDelete = [...new Set(toDelete)];
         codecontainer = [...new Set(codecontainer)];
         GenerateContainer = [...new Set(GenerateContainer)];
         checksub=2;
@@ -143,6 +147,8 @@ function code03verified(){
     }else
     if(Gcode03){
         codecontainer.push(Gcode03.CourseCode);
+        toDelete.push(Gcode03.dataID);
+        toDelete = [...new Set(toDelete)];
         codecontainer = [...new Set(codecontainer)];
         GenerateContainer = [...new Set(GenerateContainer)];
         checksub=3;
@@ -164,6 +170,8 @@ function code04verified(){
     }else
     if (Gcode04){
         codecontainer.push(Gcode04.CourseCode);
+        toDelete.push(Gcode04.dataID);
+        toDelete = [...new Set(toDelete)];
         codecontainer = [...new Set(codecontainer)];
         GenerateContainer = [...new Set(GenerateContainer)];
         checksub=4;
@@ -185,6 +193,8 @@ function code05verified(){
     }else
     if(Gcode05){
         codecontainer.push(Gcode05.CourseCode);
+        toDelete.push(Gcode05.dataID);
+        toDelete = [...new Set(toDelete)];
         codecontainer = [...new Set(codecontainer)];
         GenerateContainer = [...new Set(GenerateContainer)];
         checksub=5;
@@ -206,6 +216,8 @@ function code06verified(){
     }else
     if(Gcode06){
         codecontainer.push(Gcode06.CourseCode);
+        toDelete.push(Gcode06.dataID);
+        toDelete = [...new Set(toDelete)];
         codecontainer = [...new Set(codecontainer)];
         GenerateContainer = [...new Set(GenerateContainer)];
         checksub=6;
@@ -231,6 +243,8 @@ function code07verified(){
     }else
     if (Gcode07){
         codecontainer.push(Gcode07.CourseCode);
+        toDelete.push(Gcode07.dataID);
+        toDelete = [...new Set(toDelete)];
         codecontainer = [...new Set(codecontainer)];
         GenerateContainer = [...new Set(GenerateContainer)];
         checksub=7;
@@ -252,6 +266,8 @@ function code08verified(){
     }else
     if(Gcode08){
         codecontainer.push(Gcode08.CourseCode);
+        toDelete.push(Gcode08.dataID);
+        toDelete = [...new Set(toDelete)];
         codecontainer = [...new Set(codecontainer)];
         GenerateContainer = [...new Set(GenerateContainer)];
         checksub=8;
@@ -273,6 +289,8 @@ function code09verified(){
     }else
     if(Gcode09){
         codecontainer.push(Gcode09.CourseCode);
+        toDelete.push(Gcode09.dataID);
+        toDelete = [...new Set(toDelete)];
         codecontainer = [...new Set(codecontainer)];
         GenerateContainer = [...new Set(GenerateContainer)];
         checksub=9;
@@ -294,6 +312,8 @@ function code010verified(){
     }else
     if (Gcode10){
         codecontainer.push(Gcode10.CourseCode);
+        toDelete.push(Gcode10.dataID);
+        toDelete = [...new Set(toDelete)];
         codecontainer = [...new Set(codecontainer)];
         GenerateContainer = [...new Set(GenerateContainer)];
         checksub=10;
@@ -315,6 +335,8 @@ function code011verified(){
     }else
     if(Gcode11){
         codecontainer.push(Gcode11.CourseCode);
+        toDelete.push(Gcode11.dataID);
+        toDelete = [...new Set(toDelete)];
         codecontainer = [...new Set(codecontainer)];
         GenerateContainer = [...new Set(GenerateContainer)];
         checksub=11;
@@ -336,6 +358,8 @@ function code12verified(){
     }else
     if(Gcode12){
         codecontainer.push(Gcode12.CourseCode);
+        toDelete.push(Gcode12.dataID);
+        toDelete = [...new Set(toDelete)];
         codecontainer = [...new Set(codecontainer)];
         GenerateContainer = [...new Set(GenerateContainer)];
         checksub=12;
@@ -377,7 +401,7 @@ async function SaveRegistrationFrom(){
                     subjects : subjectsData.flat().filter((subject) => subject),
             })
             const collectionRef = client.collection("GENERATE_CODE");
-            const docRef = collectionRef.doc(newdataID[i]);
+            const docRef = collectionRef.doc(toDelete[i]);
             docRef.delete()
             document.getElementById('pop-up-message').innerHTML="Registered Successful!";
             document.getElementById('pop-up-message').style.textAlign = "center";
@@ -606,6 +630,7 @@ qrbtn.addEventListener('click', function() {
                 qrResults = decodeText,decodeResult;
                 const Toseperate = qrResults.split(",");
                 qrResults = Toseperate[1];
+                console.log(qrResults);
                 QrVerification();
                 myqrcode.classList.remove("show");
                 myqr.innerHTML = `You scanned ${decodeText}`;
