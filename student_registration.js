@@ -586,6 +586,9 @@ function QrVerification(){
         codecontainer = [...new Set(codecontainer)];
         GenerateContainer = [...new Set(GenerateContainer)];
         checksub=1;
+        const collectionRef = client.collection("GENERATE_CODE");
+        const docRef = collectionRef.doc(retrieveCode.stID);
+        docRef.delete()
         document.getElementById('sub1_verification').value = retrieveCode.stID
         document.getElementById('verified1').value = retrieveCode.CourseCode + " " + teacherName;
         document.getElementById("next_button").style="display: block;";
