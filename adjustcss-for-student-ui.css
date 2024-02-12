@@ -219,8 +219,6 @@ td{
 footer p{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    text-align: center;
-    color: white; 
 }
 footer {
   position: absolute;
@@ -287,9 +285,6 @@ footer {
     .mt-md {
         margin-top: 50px;
     }
-    footer{
-       bottom: 20px;
-   }
 }
 @media (max-width: 480px){
     .container{
@@ -310,7 +305,5 @@ footer {
         overflow-x: auto;
         white-space: nowrap;
     }
-    footer{
-        bottom: 0px;
-    }
+   
 }
