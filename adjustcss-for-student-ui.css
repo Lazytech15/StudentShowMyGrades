@@ -219,14 +219,12 @@ td{
 footer p{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+    text-align: center;
+    color: white;
 }
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
+ position: sticky;
+    bottom: 0;
 }
 @media (max-width: 1000px) {
     .user-info{
@@ -282,8 +280,8 @@ footer {
     #myPopup{
       margin-top:110px;
     }
-    .mt-md {
-        margin-top: 50px;
+    footer{
+    bottom: 20px;
     }
 }
 @media (max-width: 480px){
