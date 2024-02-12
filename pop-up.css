@@ -56,6 +56,11 @@
   background-color:white;
   color:black;
 }
+footer{
+    margin-top:120px;
+    justify-content:center;
+    text-align:center;
+}
 @media only screen and (max-width: 800px) {
   .popup-content{
     width: 300px;
