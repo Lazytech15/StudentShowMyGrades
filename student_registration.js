@@ -76,7 +76,8 @@ function conditionStatement(){
                 Course_Code = GenerateData.data().CourseCode;
                 GenerateContainer.push({ ...data, dataID});
                 IDrecieved.push(dataID);
-                
+               
+            }) 
                 code01verified();
                 code02verified();
                 code03verified();
@@ -89,8 +90,6 @@ function conditionStatement(){
                 code010verified();
                 code011verified();
                 code12verified();
-               
-            })   
         })
     }
 }
