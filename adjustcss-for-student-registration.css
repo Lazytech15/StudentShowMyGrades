@@ -170,10 +170,13 @@ textarea{
 #closecamera{
     cursor: pointer;
 }
-footer{
-    bottom: 10px;
-    position: fixed;
-    color: white;
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
 }
 @media (max-width:700px) {
     .registrationbtn-container{
