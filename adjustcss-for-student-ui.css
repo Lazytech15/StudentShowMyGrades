@@ -170,7 +170,7 @@ span{
 
 #table-design{
     margin-top: 5px;
-    height: auto;
+    height: 80vh;
     overflow-y: auto;
     border: 2px solid white;
     border-radius: 10px;
