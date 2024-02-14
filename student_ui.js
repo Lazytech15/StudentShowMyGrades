@@ -1,1 +1,248 @@
-const _0xc85474=_0x50d7;(function(_0x50ec18,_0x5bf96f){const _0x3b4abb=_0x50d7,_0x38b5fd=_0x50ec18();while(!![]){try{const _0x516fb5=-parseInt(_0x3b4abb(0x107))/0x1+parseInt(_0x3b4abb(0x116))/0x2*(parseInt(_0x3b4abb(0x118))/0x3)+-parseInt(_0x3b4abb(0x13b))/0x4*(parseInt(_0x3b4abb(0x155))/0x5)+parseInt(_0x3b4abb(0x106))/0x6*(-parseInt(_0x3b4abb(0x12a))/0x7)+-parseInt(_0x3b4abb(0x108))/0x8*(parseInt(_0x3b4abb(0x10b))/0x9)+-parseInt(_0x3b4abb(0x154))/0xa*(-parseInt(_0x3b4abb(0x15b))/0xb)+parseInt(_0x3b4abb(0x12f))/0xc;if(_0x516fb5===_0x5bf96f)break;else _0x38b5fd['push'](_0x38b5fd['shift']());}catch(_0x11e439){_0x38b5fd['push'](_0x38b5fd['shift']());}}}(_0x1785,0x458bb));const _0x5e32c0=(function(){let _0x4cdff6=!![];return function(_0x389cd3,_0x201c0c){const _0x4583a4=_0x4cdff6?function(){const _0x3c7c04=_0x50d7;if(_0x201c0c){const _0x9ba486=_0x201c0c[_0x3c7c04(0x110)](_0x389cd3,arguments);return _0x201c0c=null,_0x9ba486;}}:function(){};return _0x4cdff6=![],_0x4583a4;};}()),_0x269424=_0x5e32c0(this,function(){const _0x24e040=_0x50d7;let _0x5632fe;try{const _0xa90a93=Function(_0x24e040(0x12e)+_0x24e040(0x11b)+');');_0x5632fe=_0xa90a93();}catch(_0x22b8e2){_0x5632fe=window;}const _0x2d9f24=_0x5632fe[_0x24e040(0x11c)]=_0x5632fe[_0x24e040(0x11c)]||{},_0x179b9d=[_0x24e040(0x12c),_0x24e040(0x138),'info',_0x24e040(0x159),_0x24e040(0x157),'table',_0x24e040(0x15a)];for(let _0x2ab9e5=0x0;_0x2ab9e5<_0x179b9d[_0x24e040(0x146)];_0x2ab9e5++){const _0x4843ee=_0x5e32c0[_0x24e040(0x148)]['prototype'][_0x24e040(0x15c)](_0x5e32c0),_0x26b7e9=_0x179b9d[_0x2ab9e5],_0x55262d=_0x2d9f24[_0x26b7e9]||_0x4843ee;_0x4843ee[_0x24e040(0x12d)]=_0x5e32c0[_0x24e040(0x15c)](_0x5e32c0),_0x4843ee['toString']=_0x55262d[_0x24e040(0x125)][_0x24e040(0x15c)](_0x55262d),_0x2d9f24[_0x26b7e9]=_0x4843ee;}});_0x269424();import{initializeApp}from'https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js';const firebaseConfig={'apiKey':_0xc85474(0x11d),'authDomain':_0xc85474(0x14a),'projectId':_0xc85474(0x132),'storageBucket':_0xc85474(0x14e),'messagingSenderId':_0xc85474(0x10e),'appId':_0xc85474(0x127)};import{getFirestore,doc,getDoc,collection,addDoc,setDoc,updateDoc,deleteDoc,deleteField}from'https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js';firebase['initializeApp'](firebaseConfig);const db=firebase['firestore']();let student_id,tri,subs=[];const storedData=localStorage[_0xc85474(0x111)]('UserData');function _0x50d7(_0x33939e,_0x59c4a3){const _0x569ac4=_0x1785();return _0x50d7=function(_0x269424,_0x5e32c0){_0x269424=_0x269424-0x105;let _0x96d4be=_0x569ac4[_0x269424];return _0x96d4be;},_0x50d7(_0x33939e,_0x59c4a3);}try{const studentsub=[],userData=JSON[_0xc85474(0x153)](storedData);userData[_0xc85474(0x133)](_0x14f284=>{const _0x57f33e=_0xc85474;student_id=_0x14f284['student_id'],tri=_0x14f284[_0x57f33e(0x14c)],studentsub[_0x57f33e(0x149)](_0x14f284[_0x57f33e(0x114)]),studentsub[_0x57f33e(0x133)](_0x8bf598=>{subs=[..._0x8bf598];});});}catch(_0x13b4f8){console[_0xc85474(0x159)](_0xc85474(0x11e),_0x13b4f8);}function Getalldata(){const _0x4c8aaa=_0xc85474;db[_0x4c8aaa(0x10f)](student_id)[_0x4c8aaa(0x11a)](_0x4c8aaa(0x119))[_0x4c8aaa(0x14f)]()['then'](_0x4d8e80=>{const _0x3f7a5f=[],_0x10e99f=[],_0x30d04e=[],_0x16ca77=[];_0x4d8e80['forEach'](_0xdcf676=>{const _0x858c81=_0x50d7,_0xef3c19=_0xdcf676[_0x858c81(0x145)](),_0x513475=_0xdcf676['id'],_0x2937ba=_0xdcf676[_0x858c81(0x145)]()[_0x858c81(0x135)];let _0x34eeda,_0x1a9b52=subs[_0x858c81(0x121)](_0x16cb8c=>_0x2937ba[_0x858c81(0x126)](_0x16cb8c));_0x1a9b52['forEach'](_0x28e97e=>{_0x34eeda=_0x28e97e;}),_0x34eeda===_0x513475&&(_0x16ca77['push']({..._0xef3c19}),_0x16ca77[_0x858c81(0x133)](_0xe50ce2=>{const _0x45ae08=_0x858c81;if(_0xe50ce2[_0x45ae08(0x13d)]===_0x45ae08(0x10d))_0x3f7a5f['push']({..._0xef3c19}),document[_0x45ae08(0x14b)](_0x45ae08(0x115))[_0x45ae08(0x117)]='display:\x20block';else _0xe50ce2[_0x45ae08(0x13d)]==='2nd'?(_0x10e99f[_0x45ae08(0x149)]({..._0xef3c19}),document['getElementById'](_0x45ae08(0x128))[_0x45ae08(0x117)]=_0x45ae08(0x129)):(_0x30d04e[_0x45ae08(0x149)]({..._0xef3c19}),document[_0x45ae08(0x14b)](_0x45ae08(0x144))[_0x45ae08(0x117)]='display:\x20block');}));}),FirsttrimesterDisplay(_0x3f7a5f),SecondtrimesterDisplay(_0x10e99f),ThirdtrimesterDisplay(_0x30d04e);});}function _0x1785(){const _0x1cb3ba=['AIzaSyByH0pNuEoNXna4Dj61C2QxIX-AfmFAnq0','Error\x20accessing\x20data:','REMARK','stname','filter','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','school_year','querySelector','toString','includes','1:88056856756:web:9597da80bb7239996bd7e1','table2','display:\x20block','463778JfdrAW','secondtrimester','log','__proto__','return\x20(function()\x20','10438572ksodjV','appendChild','stringify','antipolo-hackathon-project','forEach','open','COURSE_CODE','textContent','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','warn','MIDTERM','close','4564lZHtCq','innerHTML','TRIMESTER','FACULTY_NAME','FINALS','STUDENT_NAME','thirdtrimester','onload','PRELIM','table3','data','length','CREDIT_UNITS','constructor','push','antipolo-hackathon-project.firebaseapp.com','getElementById','tri','td:nth-child(3)','antipolo-hackathon-project.appspot.com','get','display','from','find','parse','1481570BqmXqd','35KqfGaI','COURSE_DESCRIPTION','exception','firsttrimester','error','trace','22oqsUsW','bind','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','addEventListener','30ebfjcQ','260129SFdCGf','2008SsYCID','getElementsByTagName','ACADEMIC_YEAR','15903YWVbIG','none','1st','88056856756','collection','apply','getItem','SECTION','createElement','subs','table','323134LBbcCn','style','3mBaukn','createdAt','orderBy','{}.constructor(\x22return\x20this\x22)(\x20)','console'];_0x1785=function(){return _0x1cb3ba;};return _0x1785();}function FirsttrimesterDisplay(_0x4614a4){const _0x2231a7=_0xc85474,_0x584340=document[_0x2231a7(0x14b)](_0x2231a7(0x158)),_0x2ebcc0=[...new Set(_0x4614a4)];_0x584340[_0x2231a7(0x13c)]='';let _0xed8381=null;_0x2ebcc0[_0x2231a7(0x133)](_0x2b2178=>{const _0x2b61f8=_0x2231a7;if(!_0xed8381||JSON[_0x2b61f8(0x131)](_0x2b2178)!==JSON[_0x2b61f8(0x131)](_0xed8381)){const _0x408b9a=Array[_0x2b61f8(0x151)](_0x584340[_0x2b61f8(0x109)]('tr'))['find'](_0x49bf46=>{const _0xaab916=_0x2b61f8,_0x5a1dce=_0x49bf46[_0xaab916(0x124)]('td:nth-child(3)');return _0x5a1dce&&_0x5a1dce[_0xaab916(0x136)]!==_0x2b2178[_0xaab916(0x13d)];});if(!_0x408b9a){const _0x15b72a=document['createElement']('tr');_0x15b72a[_0x2b61f8(0x13c)]=_0x2b61f8(0x122)+_0x2b2178[_0x2b61f8(0x135)]+_0x2b61f8(0x15d)+_0x2b2178[_0x2b61f8(0x156)]+_0x2b61f8(0x15d)+_0x2b2178[_0x2b61f8(0x13d)]+_0x2b61f8(0x15d)+_0x2b2178[_0x2b61f8(0x143)]+_0x2b61f8(0x15d)+_0x2b2178[_0x2b61f8(0x139)]+_0x2b61f8(0x15d)+_0x2b2178[_0x2b61f8(0x13f)]+_0x2b61f8(0x15d)+_0x2b2178[_0x2b61f8(0x11f)]+_0x2b61f8(0x15d)+_0x2b2178[_0x2b61f8(0x112)]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>'+_0x2b2178[_0x2b61f8(0x13e)]+_0x2b61f8(0x15d)+_0x2b2178[_0x2b61f8(0x147)]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20',document['getElementById'](_0x2b61f8(0x120))[_0x2b61f8(0x13c)]=_0x2b2178[_0x2b61f8(0x140)],document[_0x2b61f8(0x14b)](_0x2b61f8(0x123))[_0x2b61f8(0x13c)]=_0x2b2178[_0x2b61f8(0x10a)],_0x584340[_0x2b61f8(0x130)](_0x15b72a),_0xed8381=_0x2b2178;}}});}function SecondtrimesterDisplay(_0x1534eb){const _0x243938=_0xc85474,_0x32995a=document[_0x243938(0x14b)](_0x243938(0x12b)),_0x2d2bf4=[...new Set(_0x1534eb)];if(_0x1534eb['length']===0x0)document[_0x243938(0x14b)]('table2')[_0x243938(0x117)][_0x243938(0x150)]='none';else{_0x32995a[_0x243938(0x13c)]='';let _0x544b8c=null;_0x2d2bf4['forEach'](_0x48d32d=>{const _0x3f54ae=_0x243938;if(!_0x544b8c||JSON['stringify'](_0x48d32d)!==JSON[_0x3f54ae(0x131)](_0x544b8c)){const _0x6c573d=Array['from'](_0x32995a[_0x3f54ae(0x109)]('tr'))[_0x3f54ae(0x152)](_0x3b9f8f=>{const _0x55d6d3=_0x3f54ae,_0x497ea1=_0x3b9f8f[_0x55d6d3(0x124)](_0x55d6d3(0x14d));return _0x497ea1&&_0x497ea1[_0x55d6d3(0x136)]!==_0x48d32d[_0x55d6d3(0x13d)];});if(!_0x6c573d){const _0xfec03a=document[_0x3f54ae(0x113)]('tr');_0xfec03a[_0x3f54ae(0x13c)]=_0x3f54ae(0x122)+_0x48d32d[_0x3f54ae(0x135)]+_0x3f54ae(0x15d)+_0x48d32d[_0x3f54ae(0x156)]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>'+_0x48d32d[_0x3f54ae(0x13d)]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>'+_0x48d32d[_0x3f54ae(0x143)]+_0x3f54ae(0x15d)+_0x48d32d[_0x3f54ae(0x139)]+_0x3f54ae(0x15d)+_0x48d32d[_0x3f54ae(0x13f)]+_0x3f54ae(0x15d)+_0x48d32d['REMARK']+_0x3f54ae(0x15d)+_0x48d32d['SECTION']+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>'+_0x48d32d[_0x3f54ae(0x13e)]+_0x3f54ae(0x15d)+_0x48d32d['CREDIT_UNITS']+_0x3f54ae(0x137),document[_0x3f54ae(0x14b)](_0x3f54ae(0x120))[_0x3f54ae(0x13c)]=_0x48d32d[_0x3f54ae(0x140)],document['getElementById'](_0x3f54ae(0x123))[_0x3f54ae(0x13c)]=_0x48d32d['ACADEMIC_YEAR'],_0x32995a['appendChild'](_0xfec03a),_0x544b8c=_0x48d32d;}}});}}function ThirdtrimesterDisplay(_0x399df1){const _0x3a8de0=_0xc85474,_0x1b6ec0=document[_0x3a8de0(0x14b)](_0x3a8de0(0x141)),_0x1a0812=[...new Set(_0x399df1)];if(_0x399df1[_0x3a8de0(0x146)]===0x0)document['getElementById']('table3')['style'][_0x3a8de0(0x150)]=_0x3a8de0(0x10c);else{_0x1b6ec0['innerHTML']='';let _0x38abaa=null;_0x1a0812['forEach'](_0x21d60c=>{const _0xf2d68b=_0x3a8de0;if(!_0x38abaa||JSON[_0xf2d68b(0x131)](_0x21d60c)!==JSON['stringify'](_0x38abaa)){const _0x174323=Array['from'](_0x1b6ec0[_0xf2d68b(0x109)]('tr'))['find'](_0xd079da=>{const _0xc2fdd5=_0xf2d68b,_0x524ae2=_0xd079da['querySelector'](_0xc2fdd5(0x14d));return _0x524ae2&&_0x524ae2[_0xc2fdd5(0x136)]!==_0x21d60c[_0xc2fdd5(0x13d)];});if(!_0x174323){const _0x490adc=document[_0xf2d68b(0x113)]('tr');_0x490adc['innerHTML']=_0xf2d68b(0x122)+_0x21d60c[_0xf2d68b(0x135)]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>'+_0x21d60c[_0xf2d68b(0x156)]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>'+_0x21d60c['TRIMESTER']+_0xf2d68b(0x15d)+_0x21d60c[_0xf2d68b(0x143)]+_0xf2d68b(0x15d)+_0x21d60c[_0xf2d68b(0x139)]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>'+_0x21d60c['FINALS']+_0xf2d68b(0x15d)+_0x21d60c[_0xf2d68b(0x11f)]+_0xf2d68b(0x15d)+_0x21d60c[_0xf2d68b(0x112)]+_0xf2d68b(0x15d)+_0x21d60c['FACULTY_NAME']+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>'+_0x21d60c[_0xf2d68b(0x147)]+_0xf2d68b(0x137),document[_0xf2d68b(0x14b)]('stname')[_0xf2d68b(0x13c)]=_0x21d60c[_0xf2d68b(0x140)],document[_0xf2d68b(0x14b)](_0xf2d68b(0x123))['innerHTML']=_0x21d60c[_0xf2d68b(0x10a)],_0x1b6ec0['appendChild'](_0x490adc),_0x38abaa=_0x21d60c;}}});}}window[_0xc85474(0x142)]=Getalldata;function exitlogout(){const _0x1f96f6=_0xc85474;window[_0x1f96f6(0x134)]('index.html'),window[_0x1f96f6(0x13a)]();}logout_btn[_0xc85474(0x105)]('click',exitlogout);
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyByH0pNuEoNXna4Dj61C2QxIX-AfmFAnq0",
+  authDomain: "antipolo-hackathon-project.firebaseapp.com",
+  projectId: "antipolo-hackathon-project",
+  storageBucket: "antipolo-hackathon-project.appspot.com",
+  messagingSenderId: "88056856756",
+  appId: "1:88056856756:web:9597da80bb7239996bd7e1"
+};
+
+  import {
+    getFirestore, doc, getDoc, collection, addDoc, setDoc, updateDoc, deleteDoc, deleteField
+  }
+  from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  let student_id,tri;
+  let subs = [];
+
+  const storedData = localStorage.getItem('UserData');
+
+  try {
+    const studentsub =[];
+    const userData = JSON.parse(storedData); 
+    userData.forEach((studentdata) => {
+      student_id = studentdata.student_id;
+      tri = studentdata.tri;
+      studentsub.push(studentdata.subs);
+      studentsub.forEach((subject) => {
+        subs = [...subject];
+    });
+    });
+  } catch (error) {
+    console.error('Error accessing data:', error);
+  }
+  
+
+
+  
+  
+  function Getalldata() {
+    db.collection(student_id).orderBy('createdAt').get().then((querySnapshot) => {
+        const firsttrimester = [];
+        const secondtrimester = [];
+        const thirdtrimester = [];
+        const unknowndata =[];
+
+        querySnapshot.forEach((studentdata) => {
+            const data = studentdata.data();
+            const id = studentdata.id;
+            const subject = studentdata.data().COURSE_CODE;
+        
+            let datasection;
+            let intersection = subs.filter((element) => 
+                               subject.includes(element));
+                               
+            intersection.forEach((sectiondata)=>{
+                 datasection = (sectiondata);
+            })
+    if (datasection === id ) {
+    
+    unknowndata.push({ ...data});
+    unknowndata.forEach((studentdata) => {
+        // Organize data by trimester
+        if (studentdata.TRIMESTER === "1st") {
+            firsttrimester.push({ ...data });
+            document.getElementById('table').style="display: block";
+        } else if (studentdata.TRIMESTER === "2nd") {
+            secondtrimester.push({ ...data });
+            document.getElementById('table2').style="display: block";
+        } else {
+            thirdtrimester.push({ ...data });
+            document.getElementById('table3').style="display: block";
+        }
+        
+    });
+    }
+       
+            
+        });
+
+        // Call a function to display
+
+        FirsttrimesterDisplay(firsttrimester);
+        SecondtrimesterDisplay(secondtrimester);
+        ThirdtrimesterDisplay(thirdtrimester);
+
+        
+    });
+}
+
+function FirsttrimesterDisplay(firsttrimester) {
+    const tableBody = document.getElementById('firsttrimester');
+const uniqueStudentData = [...new Set(firsttrimester)];
+
+// Clear existing table rows (if any)
+tableBody.innerHTML = '';
+
+// Keep track of the previously added student data
+let prevStudent = null;
+
+// Populate the table
+uniqueStudentData.forEach((student) => {
+    // Check if the current student data is different from the previous one
+    if (!prevStudent || JSON.stringify(student) !== JSON.stringify(prevStudent)) {
+        // Check if the student's TRIMESTER matches any existing value in the third column
+        const existingRow = Array.from(tableBody.getElementsByTagName('tr')).find((row) => {
+            const thirdColumnCell = row.querySelector('td:nth-child(3)');
+            return thirdColumnCell && thirdColumnCell.textContent !== student.TRIMESTER;
+        });
+
+        if (!existingRow) {
+            // Create a new row if no matching row exists
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${student.COURSE_CODE}</td>
+                <td>${student.COURSE_DESCRIPTION}</td>
+                <td>${student.TRIMESTER}</td>
+                <td>${student.PRELIM}</td>
+                <td>${student.MIDTERM}</td>
+                <td>${student.FINALS}</td>
+                <td>${student.REMARK}</td>
+                <td>${student.SECTION}</td>
+                <td>${student.FACULTY_NAME}</td>
+                <td>${student.CREDIT_UNITS}</td>
+            `;
+            document.getElementById('stname').innerHTML = student.STUDENT_NAME;
+            document.getElementById('school_year').innerHTML = student.ACADEMIC_YEAR;
+            tableBody.appendChild(row);
+
+            // Update the previous student data
+            prevStudent = student;
+        }
+    }
+});
+    
+}
+
+function SecondtrimesterDisplay(secondtrimester) {
+    const tableBody = document.getElementById('secondtrimester');
+const uniqueStudentData = [...new Set(secondtrimester)];
+if (secondtrimester.length === 0) {
+    document.getElementById('table2').style.display = 'none';
+} else {
+// Clear existing table rows (if any)
+tableBody.innerHTML = '';
+
+// Keep track of the previously added student data
+let prevStudent = null;
+
+// Populate the table
+uniqueStudentData.forEach((student) => {
+    // Check if the current student data is different from the previous one
+    if (!prevStudent || JSON.stringify(student) !== JSON.stringify(prevStudent)) {
+        // Check if the student's TRIMESTER matches any existing value in the third column
+        const existingRow = Array.from(tableBody.getElementsByTagName('tr')).find((row) => {
+            const thirdColumnCell = row.querySelector('td:nth-child(3)');
+            return thirdColumnCell && thirdColumnCell.textContent !== student.TRIMESTER;
+        });
+
+        if (!existingRow) {
+            // Create a new row if no matching row exists
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${student.COURSE_CODE}</td>
+                <td>${student.COURSE_DESCRIPTION}</td>
+                <td>${student.TRIMESTER}</td>
+                <td>${student.PRELIM}</td>
+                <td>${student.MIDTERM}</td>
+                <td>${student.FINALS}</td>
+                <td>${student.REMARK}</td>
+                <td>${student.SECTION}</td>
+                <td>${student.FACULTY_NAME}</td>
+                <td>${student.CREDIT_UNITS}</td>
+            `;
+            document.getElementById('stname').innerHTML = student.STUDENT_NAME;
+            document.getElementById('school_year').innerHTML = student.ACADEMIC_YEAR;
+            tableBody.appendChild(row);
+
+            // Update the previous student data
+            prevStudent = student;
+        }
+    }
+});
+}
+}
+function ThirdtrimesterDisplay(thirdtriData) {
+    const tableBody = document.getElementById('thirdtrimester');
+    const uniqueStudentData = [...new Set(thirdtriData)];
+if (thirdtriData.length === 0) {
+    document.getElementById('table3').style.display = 'none';
+} else {
+// Clear existing table rows (if any)
+tableBody.innerHTML = '';
+
+// Keep track of the previously added student data
+let prevStudent = null;
+
+// Populate the table
+uniqueStudentData.forEach((student) => {
+    // Check if the current student data is different from the previous one
+    if (!prevStudent || JSON.stringify(student) !== JSON.stringify(prevStudent)) {
+        // Check if the student's TRIMESTER matches any existing value in the third column
+        const existingRow = Array.from(tableBody.getElementsByTagName('tr')).find((row) => {
+            const thirdColumnCell = row.querySelector('td:nth-child(3)');
+            return thirdColumnCell && thirdColumnCell.textContent !== student.TRIMESTER;
+        });
+
+        if (!existingRow) {
+            // Create a new row if no matching row exists
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${student.COURSE_CODE}</td>
+                <td>${student.COURSE_DESCRIPTION}</td>
+                <td>${student.TRIMESTER}</td>
+                <td>${student.PRELIM}</td>
+                <td>${student.MIDTERM}</td>
+                <td>${student.FINALS}</td>
+                <td>${student.REMARK}</td>
+                <td>${student.SECTION}</td>
+                <td>${student.FACULTY_NAME}</td>
+                <td>${student.CREDIT_UNITS}</td>
+            `;
+            document.getElementById('stname').innerHTML = student.STUDENT_NAME;
+            document.getElementById('school_year').innerHTML = student.ACADEMIC_YEAR;
+            tableBody.appendChild(row);
+
+            // Update the previous student data
+            prevStudent = student;
+        }
+    }
+});
+}
+}
+  
+  window.onload = Getalldata;
+
+function exitlogout(){
+  window.open("index.html");
+  window.close();
+  }
+    
+  logout_btn.addEventListener('click',exitlogout); 
+  
